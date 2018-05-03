@@ -54,8 +54,10 @@ Plugin 'ervandew/supertab' "  completion
 
 " RoR
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'slim-template/vim-slim.git'
 " All of your Plugins must be added before the following line
 call vundle#end()
+syntax enable
 filetype plugin indent on
 
 " NERDTree config
@@ -64,7 +66,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-map <Leader>n :NERDTreeToggle<CR>
+map <Leader>nt :NERDTreeToggle<CR>
 
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "✹",
@@ -101,3 +103,4 @@ let g:airline_theme='deus'
 
 "Syntastic
 let g:syntastic_ruby_exec = '/Users/dan/.rvm/rubies/ruby-2.5.0/bin/ruby'
+set cursorcolumn " highlight current column
