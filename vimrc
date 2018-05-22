@@ -2,7 +2,7 @@ filetype on
 syntax on
 colorscheme Tomorrow-Night
 set guifont=Menlo\ Regular:h15
-set guifont=Monaco\ for\ Powerline:h15
+set guifont=Monaco\ for\ Powerline:h16
 set colorcolumn=90
 set number
 
@@ -28,6 +28,8 @@ nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 
 " Show matching parenthesis
 set showmatch
+
+set linespace=2
 
 map <leader>s :source ~/.vimrc<CR>
 " open previous
